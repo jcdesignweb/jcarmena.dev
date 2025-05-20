@@ -1,0 +1,98 @@
+{
+  "generics": {
+    "home": "Inicio",
+    "scroll_down": "Ir mas abajo"
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "return_to": "Volver a"
+  },
+  "menu": {
+    "about_me": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Hola, soy ",
+    "description": "Desarrollador de software apasionado por crear soluciones elegantes y funcionales.",
+    "btn_see_projects": "Ver proyectos",
+    "btn_contact_me": "Contactame"
+  },
+  "about_me": {
+    "title": "Sobre mí",
+    "subtitle": "Desarrollador de Software",
+    "description": {
+      "p1": "Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles. Me apasiona crear soluciones elegantes y funcionales que resuelvan problemas reales.",
+      "p2": "Mi enfoque se centra en escribir código limpio, mantenible y escalable, utilizando las mejores prácticas y patrones de diseño. Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades."
+    },
+    "skills": "Mis habilidades"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "see_project": "Ver proyecto",
+    "see_code": "Ver código",
+    "projects": [
+      {
+        "name": "Jukeis Desktop App",
+        "techs": ["React", "Node.js", "Electron ERB"],
+        "image": "/jukeis.png",
+        "description": "Almacenamiento de claves de forma encriptada local y en Google Drive",
+        "github": "https://github.com/jcdesignweb/jukeis-app-erb",
+        "url": "https://snapcraft.io/jukeis"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Mi Experiencia",
+    "jobs": [
+      {
+        "company": "Distillery",
+        "dates": "03/2023 - 04/2025",
+        "title": "Backend developer - Node.js",
+        "description": "I worked as Ssr Advanced Backend developer in Distillery helping for a customer (RabbitMx) from Mexico. I collaborate closely with cross-functional teams to deliver high-quality, maintainable code and contribute to the continuous improvement of our development workflows. It was a big challenge to work inside of RabbitMx company because they have more of 250k of customers and the daily experience was thilled. Basically, I used two kind of projects: The serverless and Monolith with NestJS projects. The main coding language for those project ws JavaScript & TypeScript. "
+      },
+      {
+        "company": "OV Loop",
+        "dates": "03/2018 - 02/2023",
+        "title": "Backend developer",
+        "description": "I have worked for two teams in OV Loop. The Messaging and Payments teams. In the first one I worked as Node.js developer using mainly Express.js and DinamoDB working with different microservices to store and manage the data provided from the native mobile apps and Web clients. Then, I had the opportunity to work for the Payments teams where I was able to learn a lot o stuff related to Payments & billing Business logic and product."
+      },
+      {
+        "company": "La voz del Interior",
+        "dates": "08/2017 - 02/2018",
+        "title": "Software Developer",
+        "description": "Tuve la oportunidad de trabajar para una importante organización dentro de LVI en Córdoba, Argentina. En LVI, aprendí el framework Laravel para PHP y refresqué mis conocimientos con el lenguaje."
+      },
+      {
+        "company": "Webee LLC",
+        "dates": "02/2015 - 08/2017",
+        "title": "Mobile iOS developer, Node.js ",
+        "description": "Webee es una empresa de IoT. Trabajar allí fue muy interesante y emocionante. Tuve la oportunidad de trabajar con excelentes compañeros y aprendí mucho sobre electrónica, programación de bajo nivel y diferentes tipos de protocolos de comunicación electrónica como ZigBee y esquemas HTTP para la mensajería segura de datos."
+      },
+      {
+        "company": "Elipsys IT",
+        "dates": "05/2014 - 02/2015",
+        "title": "Android developer",
+        "description": "Tuve la oportunidad de trabajar con un equipo de programadores altamente capacitados y conocí a gente increíble. Mi función en Elipsys fue desarrollar una aplicación Android utilizando el SDK Clover para Android. Fui responsable del diseño, la arquitectura y la programación del sistema."
+      },
+      {
+        "company": "Ellecktra Imagen Global",
+        "dates": "05/2014 - 02/2015",
+        "title": "Fullstack Developer PHP/JavaScript",
+        "description": "Trabajé como desarrollador Fullstack en Ellectra ayudando a desarrollar nuevos proyectos utilizando JavaScript (jQuery) y PHP, así como Mobile usando Phonegap."
+      },
+      {
+        "company": "Oh!Studio",
+        "dates": "10/2011 - 03/2013",
+        "title": "Fullstack Developer PHP/JavaScript",
+        "description": "Fue mi primera experiencia profesional trabajando para diferentes clientes en Argentina y Europa. Mi rol allí era el de desarrollador web JR. Trabajaba con la tecnología de la época (PHP, JavaScript estándar y, ocasionalmente, con la biblioteca jQuery). Aprendí mucho sobre bases de código de programación y diseño web con CSS y media queries."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctame"
+  }
+
+
+}
