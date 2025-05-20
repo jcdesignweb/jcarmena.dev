@@ -1,21 +1,26 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale, getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "jcarmena.dev | Web developer",
   description: "Portfolio multilingüe",
 };
 
-export default async function LocaleLayout(props: {
-  children: React.ReactNode;
+type Props = {
+  children: ReactNode;
   params: { locale: string };
-}) {
-  const { children, params } = props;
-  console.log("Params", params);
-  const locale = params.locale;
+};
+
+export default async function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  const locale = await getLocale();
   const messages = await getMessages({ locale });
 
   return (
