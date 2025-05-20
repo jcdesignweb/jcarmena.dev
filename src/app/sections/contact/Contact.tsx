@@ -1,10 +1,8 @@
 import Image from "next/image";
 import "./Contact.css";
 import { useTranslations } from "next-intl";
-import { useReCaptcha } from "next-recaptcha-v3";
 
 export const ContactSection = () => {
-  const { executeRecaptcha } = useReCaptcha();
 
   const t = useTranslations();
   return (
