@@ -3,16 +3,13 @@ import { getLocale, getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
-import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "jcarmena.dev | Web developer",
   description: "Portfolio multilingüe",
-};
-
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default async function RootLayout({

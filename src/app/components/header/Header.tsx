@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="navbar">
+      <nav className="navbar scrolled">
         <div className="navbar-container">
             <a href="#" className="logo"><Image src={"/logo.png"} alt="Logo" height={40} width={40}/></a>
             <ul className="nav-links">
