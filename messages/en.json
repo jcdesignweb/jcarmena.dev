@@ -91,6 +91,15 @@
     ]
   },
   "contact": {
-    "title": "Contact Me"
+    "title": "Contact Me",
+    "send": "Send",
+    "form": {
+      "placeholders": {
+        "name": "Name",
+        "email": "E-mail",
+        "subject": "Subject",
+        "message": "Message"
+      }
+    }
   }
 }

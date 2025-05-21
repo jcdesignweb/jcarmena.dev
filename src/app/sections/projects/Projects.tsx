@@ -24,7 +24,7 @@ export const ProjectsSection = () => {
               <div className="project-tags">
                 {
                   project.techs.map((tech, idx) => (
-                    <span className="project-tag">{tech}</span>
+                    <span className="project-tag" key={idx}>{tech}</span>
                   ))
                 }
                 

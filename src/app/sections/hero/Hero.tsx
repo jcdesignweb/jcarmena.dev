@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import "./Hero.css";
@@ -23,113 +23,107 @@ export const HeroSection = () => {
     });
   }, []);
 
-  const particlesLoaded = (container: any): any => {
-    console.log(container);
+  const particlesLoaded = (): any => {
+    
   };
 
   const t = useTranslations();
 
   return (
     <>
-
       <section className="hero" id="home">
-              <div className="particles-wrapper">
-
-        {init && (
-          <Particles
-            id="tsparticles"
-            particlesLoaded={particlesLoaded}
-            options={{
-              background: {
-                color: {
-                  value: "#34495e",
+        <div className="particles-wrapper">
+          {init && (
+            <Particles
+              id="tsparticles"
+              particlesLoaded={particlesLoaded}
+              options={{
+                background: {
+                  color: {
+                    value: "#34495e",
+                  },
                 },
-              },
-              fpsLimit: 120,
-              interactivity: {
-                events: {
-                  onClick: {
+                fpsLimit: 120,
+                interactivity: {
+                  events: {
+                    onClick: {
+                      enable: true,
+                      mode: "push",
+                    },
+                    onHover: {
+                      enable: true,
+                      mode: "repulse",
+                    },
+                  },
+                  modes: {
+                    push: {
+                      quantity: 4,
+                    },
+                    repulse: {
+                      distance: 200,
+                      duration: 0.4,
+                    },
+                  },
+                },
+                particles: {
+                  color: {
+                    value: "#ffffff",
+                  },
+                  links: {
+                    color: "#ffffff",
+                    distance: 150,
                     enable: true,
-                    mode: "push",
+                    opacity: 0.5,
+                    width: 1,
                   },
-                  onHover: {
+                  move: {
+                    direction: "none",
                     enable: true,
-                    mode: "repulse",
+                    outModes: {
+                      default: "bounce",
+                    },
+                    random: false,
+                    speed: 6,
+                    straight: false,
+                  },
+                  number: {
+                    density: {
+                      enable: true,
+                    },
+                    value: 80,
+                  },
+                  opacity: {
+                    value: 0.5,
+                  },
+                  shape: {
+                    type: "circle",
+                  },
+                  size: {
+                    value: { min: 1, max: 5 },
                   },
                 },
-                modes: {
-                  push: {
-                    quantity: 4,
-                  },
-                  repulse: {
-                    distance: 200,
-                    duration: 0.4,
-                  },
-                },
-              },
-              particles: {
-                color: {
-                  value: "#ffffff",
-                },
-                links: {
-                  color: "#ffffff",
-                  distance: 150,
-                  enable: true,
-                  opacity: 0.5,
-                  width: 1,
-                },
-                move: {
-                  direction: "none",
-                  enable: true,
-                  outModes: {
-                    default: "bounce",
-                  },
-                  random: false,
-                  speed: 6,
-                  straight: false,
-                },
-                number: {
-                  density: {
-                    enable: true,
-                  },
-                  value: 80,
-                },
-                opacity: {
-                  value: 0.5,
-                },
-                shape: {
-                  type: "circle",
-                },
-                size: {
-                  value: { min: 1, max: 5 },
-                },
-              },
-              detectRetina: true,
-            }}
-          />
-        )}
-
-      </div>
+                detectRetina: true,
+              }}
+            />
+          )}
+        </div>
 
         <div className="hero-content">
           <h1 id="iam">
-            {t('hero.title')} <span>Juan Andrés Carmena</span>
+            {t("hero.title")} <span>Juan Andrés Carmena</span>
           </h1>
-          <p>
-            {t('hero.description')}
-            
-          </p>
+          <p>{t("hero.description")}</p>
           <div className="hero-buttons">
             <a href="#projects" className="btn">
-              {t('hero.btn_see_projects')}
+              {t("hero.btn_see_projects")}
             </a>
             <a href="#contact" className="btn btn-outline">
-              {t('hero.btn_contact_me')}
+              {t("hero.btn_contact_me")}
             </a>
           </div>
         </div>
         <a href="#about" className="scroll-down">
-          <span>{t('generics.scroll_down')}</span>
+          <span>{t("generics.scroll_down")}</span>
           <i className="fas fa-chevron-down"></i>
         </a>
       </section>

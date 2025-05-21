@@ -23,8 +23,6 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages({ locale });
 
-  console.log("SITE KEY", process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!)
-
   return (
     <html lang={locale}>
       <head>

@@ -1,11 +1,12 @@
+
 import Image from 'next/image'
 import './Header.css'
 import { useTranslations } from 'next-intl';
 import { getCookie } from '@/app/utils';
 
-export const Header = async () => {
+export const Header = () => {
   const t = useTranslations();
-  const selectedLang = getCookie('lang') || 'es'
+  const selectedLang = getCookie('lang') || 'es';
  
   const langOnClick = async (lang: 'es'|'en') => {
     document.cookie = `lang=${lang}`

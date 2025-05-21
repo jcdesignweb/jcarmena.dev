@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Juan Andres",
+    "email": "juan14nob@gmail.com",
+    "subject": "Test",
+    "message": "test test",
+    "date": "2025-05-21T14:57:38.520Z"
+  },
+  {
+    "name": "Juan Andres",
+    "email": "juan14nob@gmail.com",
+    "subject": "Test",
+    "message": "test test",
+    "date": "2025-05-21T14:58:29.843Z"
+  },
+  {
+    "name": "Juan",
+    "email": "juan14nob@gmail.com",
+    "subject": "aaa",
+    "message": "test2",
+    "date": "2025-05-21T15:21:11.552Z"
+  }
+]

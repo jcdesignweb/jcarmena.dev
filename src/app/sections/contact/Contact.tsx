@@ -6,29 +6,35 @@ import { useState } from "react";
 
 export const ContactSection = () => {
   const { executeRecaptcha } = useReCaptcha();
-  const [statusCaptcha, setStatusCaptcha] = useState("xxx");
+  const [statusCaptcha, setStatusCaptcha] = useState("");
 
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const cleanForm = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setSubject("");
+  };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-    
-
     e.preventDefault();
     if (!executeRecaptcha) {
-      setStatusCaptcha("reCAPTCHA not yet available");
+      console.error("reCAPTCHA not yet available");
       return;
     }
 
     const token = await executeRecaptcha("submit_form");
-
-    console.log("Token obtenido:", token);
-    const res = await fetch("/api/verify-recaptcha", {
+    const res = await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify({ token }),
+      body: JSON.stringify({ token, name, email, message, subject }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (res.ok) {
+      cleanForm();
       setStatusCaptcha("Formulario enviado correctamente.");
     } else {
       setStatusCaptcha("Fallo en validación de reCAPTCHA.");
@@ -63,23 +69,36 @@ export const ContactSection = () => {
           </div>
           <form className="contact-form fade-in" onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" placeholder="Nombre" value={"Juan"} required />
-            </div>
-            <div className="form-group">
               <input
-                type="email"
-                placeholder="Email"
-                value={"juan14nob@gmail.com"}
+                type="text"
+                placeholder={t("contact.form.placeholders.name")}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
             <div className="form-group">
-              <input type="text" placeholder="Asunto" value={"test"} />
+              <input
+                type="email"
+                placeholder={t("contact.form.placeholders.email")}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder={t("contact.form.placeholders.subject")}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
             </div>
             <div className="form-group">
               <textarea
-                placeholder="Mensaje"
-                value={"Test message"}
+                placeholder={t("contact.form.placeholders.message")}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 required
               ></textarea>
             </div>
@@ -87,7 +106,7 @@ export const ContactSection = () => {
             {statusCaptcha && <p>{statusCaptcha}</p>}
 
             <button type="submit" className="form-submit">
-              Enviar Mensaje
+              {t("contact.send")}
             </button>
           </form>
         </div>

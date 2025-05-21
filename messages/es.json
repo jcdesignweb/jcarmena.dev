@@ -91,7 +91,16 @@
     ]
   },
   "contact": {
-    "title": "Contáctame"
+    "title": "Contáctame",
+    "send": "Enviar",
+    "form": {
+      "placeholders": {
+        "name": "Nombre",
+        "email": "E-mail",
+        "subject": "Asunto",
+        "message": "Mensaje"
+      }
+    }
   }
 
 
