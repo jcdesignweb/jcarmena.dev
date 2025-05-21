@@ -1,8 +1,39 @@
+import { useReCaptcha } from "next-recaptcha-v3";
 import Image from "next/image";
 import "./Contact.css";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export const ContactSection = () => {
+  const { executeRecaptcha } = useReCaptcha();
+  const [statusCaptcha, setStatusCaptcha] = useState("xxx");
+
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+     e.preventDefault();
+    
+
+    e.preventDefault();
+    if (!executeRecaptcha) {
+      setStatusCaptcha("reCAPTCHA not yet available");
+      return;
+    }
+
+    const token = await executeRecaptcha("submit_form");
+
+    console.log("Token obtenido:", token);
+    const res = await fetch("/api/verify-recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ token }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (res.ok) {
+      setStatusCaptcha("Formulario enviado correctamente.");
+    } else {
+      setStatusCaptcha("Fallo en validación de reCAPTCHA.");
+    }
+  };
 
   const t = useTranslations();
   return (
@@ -13,7 +44,7 @@ export const ContactSection = () => {
           <div className="contact-info fade-in">
             <div className="contact-info-item">
               <i className="fas fa-envelope"></i>
-              <span>juan14nob@email.com</span>
+              <span>juan14nob@gmail.com</span>
             </div>
 
             <div className="contact-info-item">
@@ -30,21 +61,30 @@ export const ContactSection = () => {
               <span>https://www.linkedin.com/in/jcarmena</span>
             </div>
           </div>
-          <form className="contact-form fade-in">
+          <form className="contact-form fade-in" onSubmit={handleSubmit}>
             <div className="form-group">
-              <input type="text" placeholder="Nombre" required />
+              <input type="text" placeholder="Nombre" value={"Juan"} required />
             </div>
             <div className="form-group">
-              <input type="email" placeholder="Email" required />
+              <input
+                type="email"
+                placeholder="Email"
+                value={"juan14nob@gmail.com"}
+                required
+              />
             </div>
             <div className="form-group">
-              <input type="text" placeholder="Asunto" />
+              <input type="text" placeholder="Asunto" value={"test"} />
             </div>
             <div className="form-group">
-              <textarea placeholder="Mensaje" required></textarea>
+              <textarea
+                placeholder="Mensaje"
+                value={"Test message"}
+                required
+              ></textarea>
             </div>
 
-            
+            {statusCaptcha && <p>{statusCaptcha}</p>}
 
             <button type="submit" className="form-submit">
               Enviar Mensaje

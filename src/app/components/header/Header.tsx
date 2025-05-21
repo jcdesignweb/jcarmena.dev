@@ -6,7 +6,6 @@ import { getCookie } from '@/app/utils';
 export const Header = async () => {
   const t = useTranslations();
   const selectedLang = getCookie('lang') || 'es'
-  console.log("selectedLang", selectedLang) 
  
   const langOnClick = async (lang: 'es'|'en') => {
     document.cookie = `lang=${lang}`
