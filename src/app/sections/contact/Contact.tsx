@@ -13,14 +13,21 @@ export const ContactSection = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  const [isProcessing, setIsProcessing] = useState(false);
+
   const cleanForm = () => {
     setName("");
     setEmail("");
     setMessage("");
     setSubject("");
+    setStatusCaptcha("");
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setStatusCaptcha("");
+    setIsProcessing(true);
+    
     if (!executeRecaptcha) {
       console.error("reCAPTCHA not yet available");
       return;
@@ -32,6 +39,8 @@ export const ContactSection = () => {
       body: JSON.stringify({ token, name, email, message, subject }),
       headers: { "Content-Type": "application/json" },
     });
+
+    setIsProcessing(false);
 
     if (res.ok) {
       cleanForm();
@@ -105,7 +114,11 @@ export const ContactSection = () => {
 
             {statusCaptcha && <p>{statusCaptcha}</p>}
 
-            <button type="submit" className="form-submit">
+            <button
+              type="submit"
+              className="form-submit"
+              disabled={isProcessing}
+            >
               {t("contact.send")}
             </button>
           </form>

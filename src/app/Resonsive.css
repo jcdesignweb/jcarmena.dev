@@ -94,10 +94,19 @@
 }
 
 @media (max-width: 410px) {
-
   #projects .project-image img {
     width: 230px !important;
     height: 50px !important;
   }
 }
 
+@media (max-width: 460px) {
+  footer .footer-links {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}

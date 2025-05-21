@@ -13,14 +13,11 @@ export const Footer = () => {
           <a href="#contact">Contacto</a>
         </div>
         <div className="social-links">
-          <a href="#">
+          <a href="https://github.com/jcdesignweb" target="_blank">
             <i className="fab fa-github"></i>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/jcarmena" target="_blank">
             <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="#">
-            <i className="fab fa-twitter"></i>
           </a>
           <a href="#">
             <i className="fab fa-instagram"></i>

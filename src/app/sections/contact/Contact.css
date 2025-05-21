@@ -114,6 +114,11 @@
   align-self: flex-start;
 }
 
+.form-submit:disabled {
+  background-color: #e3e3e3;
+  color: #000
+}
+
 .form-submit:hover {
   background-color: #16a085;
   transform: translateY(-3px);

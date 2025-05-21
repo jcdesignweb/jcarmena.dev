@@ -1,8 +1,12 @@
 import { Resend } from "resend";
+import NodeCache from "node-cache";
+
+const tokenCache = new NodeCache({ stdTTL: 120 });
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const EMAIL_TO = "juan14nob@gmail.com"
-const EMAIL_FROM = "onboarding@resend.dev"
+const EMAIL_TO = "juan14nob@gmail.com";
+const EMAIL_FROM = "jcarmena.dev@resend.dev";
 
 type Message = {
   name: string;
@@ -42,6 +46,10 @@ export async function POST(req: Request) {
 
   const secret = process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY;
 
+  if (tokenCache.has(token)) {
+    throw new Error("Token ya usado");
+  }
+
   if (!token || typeof token !== "string") {
     return new Response(
       JSON.stringify({ success: false, message: "Token faltante o inválido" }),
@@ -69,6 +77,8 @@ export async function POST(req: Request) {
       );
     }
 
+    tokenCache.set(token, true);
+
     const newMessage: Message = {
       name,
       email,
@@ -90,7 +100,7 @@ export async function POST(req: Request) {
       status: 200,
     });
   } catch (err) {
-    console.error(err)
+    console.error(err);
     return new Response(
       JSON.stringify({ success: false, message: "Internal Server Error" }),
       { status: 500 }

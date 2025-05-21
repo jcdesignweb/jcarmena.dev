@@ -32,6 +32,7 @@
     "title": "My Projects",
     "see_project": "View the project",
     "see_code": "Browse the source",
+    "see_video": "Watch video",
     "projects": [
       {
         "name": "Jukeis Desktop App",
@@ -40,6 +41,13 @@
         "description": "Almacenamiento de claves de forma encriptada local y en Google Drive",
         "github": "https://github.com/jcdesignweb/jukeis-app-erb",
         "url": "https://snapcraft.io/jukeis"
+      },
+      {
+        "name": "Libreta Digital",
+        "techs": ["React", "Node.js", "PHP (Laravel)"],
+        "video": "https://www.youtube.com/embed/zu8Id6rWc50?si=p8_-vgBO32Ze98nJ",
+        "description": "Presentation of the 'Public TV' (Argentina) project development for CNRT",
+        "url": "https://www.youtube.com/embed/zu8Id6rWc50?si=p8_-vgBO32Ze98nJ"
       }
     ]
   },
