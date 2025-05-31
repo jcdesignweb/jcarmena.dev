@@ -26,7 +26,20 @@
       "p1": "I'm a software developer with experience in building web and mobile applications. I'm passionate about creating elegant and functional solutions that solve real-world problems.",
       "p2": "My focus is on writing clean, maintainable, and scalable code using best practices and design patterns. I'm always learning new technologies and improving my skills."
     },
-    "skills": "My skills"
+    "skills": "My skills",
+    "electronic": {
+      "title": "Electronic",
+      "skills": "My Skills in Electronics and Arduino",
+      "description": "As a creator and developer, I've gained foundational knowledge in electronics and the Arduino platform.",
+      "description2": "My experience includes:",
+      "items": {
+        "item1": "<strong>Electronics Fundamentals:</strong> Understanding of basic circuits, handling components like resistors, capacitors, diodes, and transistors.",
+        "item2": "<strong>Prototyping:</strong> Ability to assemble circuits on breadboards and create secure connections.",
+        "item3": "<strong>Arduino Programming:</strong> Familiarity with the Arduino Integrated Development Environment (IDE), writing C++ code to control hardware, and using basic libraries.",
+        "item4": "<strong>Simple Projects:</strong> Experience implementing projects such as controlled lighting systems, basic alarms with sensors, and simple actuators."
+      },
+      "end": "I am committed to continuous improvement and actively seeking opportunities to apply and expand this knowledge in challenging projects."
+    }
   },
   "projects": {
     "title": "My Projects",

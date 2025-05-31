@@ -26,6 +26,9 @@ body {
   margin-top: 250px;
 }
 
+.left { float: left; }
+.right { float: right; }
+
 /* Botón de volver arriba */
 .back-to-top {
   position: fixed;

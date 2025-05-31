@@ -45,6 +45,7 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  top: 7px;
 }
 
 .logo::after {
@@ -60,7 +61,7 @@
 }
 
 .logo:hover::after {
-  transform: translateX(0);
+ 
 }
 
 .nav-links {

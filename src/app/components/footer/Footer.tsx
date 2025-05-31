@@ -6,11 +6,11 @@ export const Footer = () => {
       <div className="footer-container">
         <div className="footer-logo">jcarmena.dev</div>
         <div className="footer-links">
-          <a href="#home">Inicio</a>
-          <a href="#about">Sobre Mí</a>
-          <a href="#projects">Proyectos</a>
-          <a href="#experience">Experiencia</a>
-          <a href="#contact">Contacto</a>
+          <a href="/#home">Inicio</a>
+          <a href="/#about">Sobre Mí</a>
+          <a href="/#projects">Proyectos</a>
+          <a href="/#experience">Experiencia</a>
+          <a href="/#contact">Contacto</a>
         </div>
         <div className="social-links">
           <a href="https://github.com/jcdesignweb" target="_blank">

@@ -26,7 +26,21 @@
       "p1": "Soy un desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles. Me apasiona crear soluciones elegantes y funcionales que resuelvan problemas reales.",
       "p2": "Mi enfoque se centra en escribir código limpio, mantenible y escalable, utilizando las mejores prácticas y patrones de diseño. Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades."
     },
-    "skills": "Mis habilidades"
+    "skills": "Mis habilidades",
+    "electronic": {
+      "title": "Electrónica",
+      "skills": "Mis Habilidades en Electrónica y Arduino",
+      "description": "En mi camino como creador y desarrollador, he adquirido conocimientos básicos en electrónica y en la plataforma Arduino.",
+      "description2": "Mi experiencia incluye:",
+      "items": {
+        "item1": "<strong>Fundamentos de electrónica:</strong> Comprensión de circuitos básicos, manejo de componentes como resistencias, condensadores, diodos y transistores.",
+        "item2": "<strong>Prototipado:</strong> Habilidad para montar circuitos en protoboards y realizar conexiones seguras.",
+        "item3": "<strong>Programación Arduino:</strong> Manejo del entorno de desarrollo (IDE) de Arduino, escritura de código en lenguaje C++ para controlar hardware, uso de librerías básicas.",
+        "item4": "<strong>Proyectos sencillos:</strong> Experiencia en la implementación de proyectos como sistemas de iluminación controlada, alarmas simples con sensores, y actuadores básicos."
+      },
+      "end": "Estoy comprometido con la mejora continua y buscando activamente oportunidades para aplicar y expandir estos conocimientos en proyectos desafiantes."
+    }
+
   },
   "projects": {
     "title": "Mis Proyectos",
@@ -58,13 +72,13 @@
         "company": "Distillery",
         "dates": "03/2023 - 04/2025",
         "title": "Backend developer - Node.js",
-        "description": "I worked as Ssr Advanced Backend developer in Distillery helping for a customer (RabbitMx) from Mexico. I collaborate closely with cross-functional teams to deliver high-quality, maintainable code and contribute to the continuous improvement of our development workflows. It was a big challenge to work inside of RabbitMx company because they have more of 250k of customers and the daily experience was thilled. Basically, I used two kind of projects: The serverless and Monolith with NestJS projects. The main coding language for those project ws JavaScript & TypeScript. "
+        "description": "Trabajé como desarrollador backend avanzado de SSR en Distillery, ayudando a un cliente (RabbitMx) de México. Colaboro estrechamente con equipos multidisciplinares para entregar código de alta calidad y fácil de mantener, y contribuyo a la mejora continua de nuestros flujos de trabajo de desarrollo. Trabajar en RabbitMx fue un gran reto, ya que cuentan con más de 250 000 clientes y la experiencia diaria fue muy enriquecedora. Básicamente, utilicé dos tipos de proyectos: sin servidor y monolíticos con NestJS. El lenguaje de programación principal para estos proyectos fue JavaScript y TypeScript."
       },
       {
         "company": "OV Loop",
         "dates": "03/2018 - 02/2023",
         "title": "Backend developer",
-        "description": "I have worked for two teams in OV Loop. The Messaging and Payments teams. In the first one I worked as Node.js developer using mainly Express.js and DinamoDB working with different microservices to store and manage the data provided from the native mobile apps and Web clients. Then, I had the opportunity to work for the Payments teams where I was able to learn a lot o stuff related to Payments & billing Business logic and product."
+        "description": "He trabajado en dos equipos de OV Loop: el de Mensajería y el de Pagos. En el primero, trabajé como desarrollador de Node.js, utilizando principalmente Express.js y DinamoDB, trabajando con diferentes microservicios para almacenar y gestionar los datos proporcionados por las aplicaciones móviles nativas y los clientes web. Posteriormente, tuve la oportunidad de trabajar en el equipo de Pagos, donde aprendí mucho sobre la lógica de negocio y el producto de Pagos y Facturación."
       },
       {
         "company": "La voz del Interior",

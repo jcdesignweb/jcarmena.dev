@@ -25,27 +25,6 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (!hamburger) throw new Error("hamburger element is missing");
-    if (!navLinks) throw new Error("navLinks element is missing");
-
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("active");
-    });
-
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        hamburger.classList.remove("active");
-      });
-    });
-  }, []);
-
-  /* Hamburger Menu */
-  useEffect(() => {
     const backToTopButton = document.querySelector(".back-to-top");
     if (!backToTopButton) return;
 
@@ -74,7 +53,7 @@ export default function Page() {
     <>
       <Loader />
 
-      <Header />
+      <Header isMain={true} />
       <div id="sections">
         <HeroSection />
         <AboutMeSection />
