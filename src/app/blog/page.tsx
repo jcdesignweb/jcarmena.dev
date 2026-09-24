@@ -5,7 +5,7 @@ export default function Page() {
     <>
       <div className="blog-index">
         <br />
-        <br /> blog index
+        <br /> En contrucción
       </div>
     </>
   );

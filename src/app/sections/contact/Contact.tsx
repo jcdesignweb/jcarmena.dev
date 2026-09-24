@@ -64,7 +64,7 @@ export const ContactSection = () => {
 
             <div className="contact-info-item">
               <i className="fas fa-map-marker-alt"></i>
-              <span>Rosario, Santa Fe, Argentina</span>
+              <span>Argentina</span>
               <Image src="/arg.png" alt="arg" width={32} height={32}></Image>
             </div>
             <div className="contact-info-item">
