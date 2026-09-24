@@ -6,10 +6,6 @@ dotenv.config();
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default withNextIntl(nextConfig);
